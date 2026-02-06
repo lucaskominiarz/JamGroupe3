@@ -20,6 +20,7 @@ public class GeneratorScript : MonoBehaviour
     private int _numberOfRessourcesIn;
     private bool _autoProduction;
     private bool _canGenerate = true;
+    private float _corruption;
 
     private void Awake()
     {
@@ -103,6 +104,6 @@ public class GeneratorScript : MonoBehaviour
         }
     }
     
-    
+    // dysfonctionnement
     // rajouter ui
 }
