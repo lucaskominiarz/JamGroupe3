@@ -364,7 +364,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e842da49a01858c43b1a37ba3981945f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5c4712a2f7686194eb2ce4ccff8f6a7c, type: 2}
+      objectReference: {fileID: 2100000, guid: e58cb395e6b663c47a764310b18bd737, type: 2}
     - target: {fileID: 919132149155446097, guid: e842da49a01858c43b1a37ba3981945f, type: 3}
       propertyPath: m_Name
       value: cargorubijam
@@ -1546,7 +1546,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e842da49a01858c43b1a37ba3981945f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 5c4712a2f7686194eb2ce4ccff8f6a7c, type: 2}
+      objectReference: {fileID: 2100000, guid: 809598d758b659b4db4285811345d37e, type: 2}
     - target: {fileID: 919132149155446097, guid: e842da49a01858c43b1a37ba3981945f, type: 3}
       propertyPath: m_Name
       value: cargorubijam (1)
