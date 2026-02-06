@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e7b71af42147f49904b8a2cdfefa53, type: 3}
   m_Name: Ressource1
   m_EditorClassIdentifier: Assembly-CSharp::RessourcesScriptable
+  Name: 
   Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
-  Material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  Material: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   Rarity: 1
