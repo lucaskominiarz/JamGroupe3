@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ef2fda168777f41b4417951b2835a7, type: 3}
+  m_Name: TestGenerator
+  m_EditorClassIdentifier: Assembly-CSharp::GeneratorScriptable
+  InRessourceScriptable: {fileID: 11400000, guid: a6e13e816a57f664bae4776cc6a4a340, type: 2}
+  OutRessourceScriptable: {fileID: 11400000, guid: 80585af7e4ed1c7458a57b1cf7e47ae8, type: 2}

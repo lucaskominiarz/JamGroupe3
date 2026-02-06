@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07e7b71af42147f49904b8a2cdfefa53, type: 3}
-  m_Name: Ressource1
+  m_Name: ressource2
   m_EditorClassIdentifier: Assembly-CSharp::RessourcesScriptable
-  Name: Jsp
-  Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  Name: trere
+  Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   Material: {fileID: 2100000, guid: 6f344ab14b7eab74588863c5c0d3752a, type: 2}
-  Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  Sprite: {fileID: 0}
   Rarity: 1
