@@ -13,6 +13,8 @@ public class GeneratorScript : MonoBehaviour
     [SerializeField] private Vector3 newSpawnPosition;
     [SerializeField] private GameObject baseRessourceObject;
     [SerializeField] private float autoRessourcesBuyDelay;
+    [SerializeField] private bool isUnlocked = false;
+    [SerializeField] private int unlockPrice;
 
     private int _level;
     private int _autoLevel;
@@ -100,6 +102,15 @@ public class GeneratorScript : MonoBehaviour
         {
             yield return new WaitForSeconds(1f / (_level +1));
             Click();
+        }
+    }
+
+    public void Unlock()
+    {
+        if (_numberOfRessourcesIn > unlockPrice)
+        {
+            isUnlocked = true;
+            _numberOfRessourcesIn -= unlockPrice;
         }
     }
     
