@@ -17,7 +17,7 @@ public class UiState : MonoBehaviour // le nom est catastrophique mais j'avais p
         else
         {
             ui.SetActive(true);
-            ui.transform.DOScale(new Vector3(1.86864471f,0.816319466f,0.816319466f), speed).SetEase(Ease.OutBack);
+            ui.transform.DOScale(new Vector3(6.9f,0.816319466f,0.816319466f), speed).SetEase(Ease.OutBack);
         }
         _isActive = !_isActive;
     }
