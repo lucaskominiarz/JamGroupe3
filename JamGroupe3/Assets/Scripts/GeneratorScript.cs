@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GeneratorScript : MonoBehaviour
 {
+    [SerializeField] private int generatorIndex;
     [SerializeField] private GeneratorScriptable generatorData;
     [SerializeField] private float baseUpgradePrice = 10f;
     [SerializeField] private float upgradePriceMultiplier = 3f;
@@ -21,7 +22,6 @@ public class GeneratorScript : MonoBehaviour
     private int _level;
     private int _autoLevel;
     private float _upgradePrice;
-    private int _numberOfRessourcesIn;
     private bool _autoProduction;
     private bool _canGenerate = true;
     private float _corruption;
@@ -31,23 +31,13 @@ public class GeneratorScript : MonoBehaviour
         _upgradePrice = baseUpgradePrice;
     }
     
-    public void Click()
-    {
-        _numberOfRessourcesIn += 1 + _level * 3;
-        if (_autoProduction)
-        {
-            RessourceGeneration();
-        }
-    }
 
     public void RessourceGeneration()
     {
-        Debug.Log(_canGenerate);
-        Debug.Log(_numberOfRessourcesIn);
-        if (_numberOfRessourcesIn != 0 && _canGenerate)
+        if (GameManager.INSTANCE.numberOfRessources[generatorIndex] != 0 && _canGenerate)
         {
             
-            _numberOfRessourcesIn--;
+            GameManager.INSTANCE.numberOfRessources[generatorIndex]--;
             _canGenerate = false;
             StartCoroutine(Generate());
         }
@@ -90,31 +80,13 @@ public class GeneratorScript : MonoBehaviour
         }
         
     }
-
-    public void LevelUpAutoRessources()
-    {
-        if (GameManager.INSTANCE.GetMoneyValue() >= autoProductionPrice)
-        {
-            GameManager.INSTANCE.AddMoney(- autoProductionPrice);
-            StartCoroutine(AutoRessources());
-        }
-    }
-
-    IEnumerator AutoRessources()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1f / (_level +1));
-            Click();
-        }
-    }
-
+    
     public void Unlock()
     {
-        if (_numberOfRessourcesIn > unlockPrice)
+        if (GameManager.INSTANCE.GetMoneyValue() > unlockPrice)
         {
             isUnlocked = true;
-            _numberOfRessourcesIn -= unlockPrice;
+            GameManager.INSTANCE.AddMoney(-unlockPrice);
             unlockPrice *= 3;
         }
     }
