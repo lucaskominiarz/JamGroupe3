@@ -15,6 +15,8 @@ public class GeneratorScript : MonoBehaviour
     [SerializeField] private float autoRessourcesBuyDelay;
     [SerializeField] private bool isUnlocked = false;
     [SerializeField] private int unlockPrice;
+    [SerializeField] private float speedDivider = 1.2f;
+    [SerializeField] private GameObject autoButton;
 
     private int _level;
     private int _autoLevel;
@@ -84,6 +86,7 @@ public class GeneratorScript : MonoBehaviour
         {
             GameManager.INSTANCE.AddMoney(- autoProductionPrice);
             _autoProduction = true;
+            autoButton.SetActive(false);
         }
         
     }
@@ -112,7 +115,13 @@ public class GeneratorScript : MonoBehaviour
         {
             isUnlocked = true;
             _numberOfRessourcesIn -= unlockPrice;
+            unlockPrice *= 3;
         }
+    }
+
+    public void LevelUpSpeed()
+    {
+        generationSpeed /= speedDivider;
     }
     
     // dysfonctionnement
